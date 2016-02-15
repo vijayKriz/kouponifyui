@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Coupon</h1>
+  <form role="form"  #coupon="ngForm">
+    <div class="form-group">
+      <label for="discountType">Discount Type</label>
+      <input type="text" class="form-control" required
+             [(ngModel)]="model.discountType"
+             ngControl="discountType"  #name="ngForm">
+    </div>
+    <div class="form-group">
+      <label for="value">Discount value</label>
+      <input type="text" class="form-control" required
+             [(ngModel)]="model.value"
+             ngControl="value"  #name="ngForm">
+    </div>
+    <div class="form-group">
+      <label for="startAt">Start On</label>
+      <input type="date" class="form-control" required
+             [(ngModel)]="model.startAt"
+             ngControl="startAt"  #name="ngForm">
+    </div>
+    <div class="form-group">
+      <label for="endAt">End On</label>
+      <input type="date" class="form-control"
+             [(ngModel)]="model.endAt"
+             ngControl="endAt"  #name="ngForm">
+    </div>
+    <div class="form-group">
+      <label for="minimumOrderAmount">Minimum Order Amount</label>
+      <input type="text" class="form-control"
+             [(ngModel)]="model.minimumOrderAmount"
+             ngControl="minimumOrderAmount"  #name="ngForm">
+    </div>
+    <div class="form-group">
+      <label for="usageLimit">Usage Limit</label>
+      <input type="text" class="form-control"
+             [(ngModel)]="model.usageLimit"
+             ngControl="usageLimit"  #name="ngForm">
+    </div>
+    <button type="submit" class="btn btn-default" (click)="submitCoupon()">Submit</button>
+  </form>
+</div>

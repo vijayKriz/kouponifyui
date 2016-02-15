@@ -1,0 +1,16 @@
+<div>
+	<div class="home jumbotron centered">
+		<h1>Kouponify</h1>
+
+		<p><a class="btn btn-primary btn-lg" role="button" (click)="createCoupon()">+</a></p>
+
+		<p><a class="btn btn-primary btn-lg" role="button" (click)="logout()">Logout</a></p>
+	</div>
+	<h2>My Coupons</h2>
+	<ul class="heroes">
+		<li *ngFor="#coup of coupons">
+			<span class="badge">{{coup.value}}</span> {{coup.code}}
+		</li>
+	</ul>
+</div>
+
